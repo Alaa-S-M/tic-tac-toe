@@ -1,0 +1,13 @@
+Tic Tac Toe working plan:
+1. open new repository on GitHub and initialize it, then clone it to my computer.
+2. create 3 new empty files: one for JS code - put it in a new folder named “src”, one for HTML and one for CSS.
+    - understand (again) the modern JS project.
+    - understand the “deploy your project” part in general.
+3. build the HTML for the game - search for the best structure to build the page - make it responsive.
+4. design the most important parts of the HTML. the board and the buttons - make it responsive.
+5. code the game in the JS file - add listeners for the buttons and the board and take care of all edge cases.
+    - when the board is full display the winner's name - do not allow more moves.
+    - use ES6.
+6. complete the design with CSS - the display of players turns, and the winner's name show the reset button.
+7. add an AI player (add a dropdown input) - then if you have time create different levels of difficulty.
+8. review the code once again.
