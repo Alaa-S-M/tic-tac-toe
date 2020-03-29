@@ -1,5 +1,6 @@
 :root,body{
     margin-left: auto;
+    margin-right: auto;
     text-align: center;
     font-size: 16px;
     font-family: 'Indie Flower', cursive;
@@ -7,29 +8,28 @@
  select{
     font-family: 'Indie Flower', cursive;
   }
-  table {
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
+  #board {
+    position: relative;
+    margin-left: auto; 
+    margin-right: auto; 
     margin-top: 1%;
-    width: 30%;
+    width: fit-content;
+    display: grid;
+    grid-template: repeat(3,100px) / repeat(3,100px);
   }
-td {
-  border: 3px solid #ddd;
-  position: relative;
-}
-td:after {
-  content: '';
-  display: block;
-  margin-top: 100%;
-}
+  #board , #turns {
+    display: flexbox;
+  }
  .content {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: gold;
+  border: 2px solid #ddd;
+  border-collapse: collapse; 
+  padding-top: 35%;
+  position: relative;
+  display: block;
+ background: gold;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bolder;
 }
 button {
   font-size: 14px;
@@ -38,14 +38,18 @@ button {
   display: inline-block;
   border: none;
   color: white;
+  background-color: rgba(24, 121, 32, 0.911) ;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
+} 
+button:hover {
+  opacity: 90%;
 }
-#replay {
+[id='play again'] {
   display: none;
 }
-#turns {
+#turns{
   padding-top: 1%;
 }
 

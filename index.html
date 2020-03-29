@@ -12,62 +12,27 @@
 
 <body>
     <h1>Tic Tac Toe</h1>
-    <!-- <p>X always starts</p> -->
-    <div id="number of players">
-        <!-- <label>How many players?</label> -->
-        <select id="number of players" required>
-            <option value="1">Number Of Players</option>
-            <option value="1">One player</option>
-            <option value="2">Two players</option>
-        </select>
-    </div>
-    <div id="one player" hidden="true">
-        <label>Choose your symbol</label>
-        <button class="X">X</button>
-        <button class="O">O</button>
-    </div>
+    <select id="number of players">
+        <option value="">Number Of Players</option>
+        <option value="1">One player</option>
+        <option value="2">Two players</option>
+    </select>
     <div id="turns">Current Player:
-        <lable class="X">X</lable>
-        <lable class="O" style="display: none;">O</lable>
+        <lable id="X" style="display: inline;">X</lable>
+        <lable id="O" style="display: none;">O</lable>
     </div>
     <div id="board">
-        <table>
-            <tr>
-                <td>
-                    <div class="content"></div>
-                </td>
-                <td>
-                    <div class="content"></div>
-                </td>
-                <td>
-                    <div class="content"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="content"></div>
-                </td>
-                <td>
-                    <div class="content"></div>
-                </td>
-                <td>
-                    <div class="content"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="content"></div>
-                </td>
-                <td>
-                    <div class="content"></div>
-                </td>
-                <td>
-                    <div class="content"></div>
-                </td>
-            </tr>
-        </table>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
     </div>
-    <button hidden="true" id="replay">Play again</button>
+    <button id="play again">Play again</button>
     <script src="src/index.js"> </script>
 </body>
 
