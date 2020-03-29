@@ -12,19 +12,11 @@
 
 <body>
     <h1>Tic Tac Toe</h1>
-    <!-- <p>X always starts</p> -->
-    <!-- <label>How many players?</label> -->
     <select id="number of players">
         <option value="">Number Of Players</option>
         <option value="1">One player</option>
         <option value="2">Two players</option>
     </select>
-    <div class="form-popup" id="OnePlayer">
-            <label>Choose your symbol</label>
-            <button value="X">X</button>
-            <button value="O">O</button>
-            <button value="C" onclick="closeForm('OnePlayer')">Cancel</button>
-    </div>
     <div id="turns">Current Player:
         <lable id="X" style="display: inline;">X</lable>
         <lable id="O" style="display: none;">O</lable>
@@ -40,7 +32,7 @@
         <div class="content"></div>
         <div class="content"></div>
     </div>
-    <button hidden="true" id="replay">Play again</button>
+    <button id="play again">Play again</button>
     <script src="src/index.js"> </script>
 </body>
 
