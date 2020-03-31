@@ -65,6 +65,7 @@ function cellListener() {
         if (checkWin(currentPlayer.innerHTML)) {
             setTimeout(alert, 10, 'Congratulations! ' + currentPlayer.innerHTML + ' Wins!');
             stopGame();
+            updateScoreBoard(currentPlayer.innerHTML);
         } else if (boardIsFull()) {
             setTimeout(alert, 10, 'XO DRAW !');
             stopGame();
@@ -91,3 +92,20 @@ let checkWin = (currentPlayer) => {
 let boardIsFull = () => ![...document.getElementsByClassName('content')].map(e => e.innerText).includes('');
 
 document.getElementById("play again").addEventListener('click', resetGame);
+
+let scoreBoard = { X: 0, O: 0, rounds: 0 };
+let updateScoreBoard = (winner) => {
+    let scores = document.getElementById('scoreBoard').contentWindow.document.getElementsByTagName('table')[0];
+    let newRow = (winner == 'X') ? "<tr> <td>1</td><td>0</td> </tr>" : "<tr> <td>0</td><td>1</td> </tr>";
+    scores.innerHTML += newRow;
+    scoreBoard.rounds++;
+    scoreBoard[winner]++;
+    if (scoreBoard.rounds == 5) {
+        winner = (scoreBoard[winner] >= 3) ? winner : (winner == 'X') ? 'O' : 'X';
+        setTimeout(alert, 1000, "Game over! " + winner + " has won " + scoreBoard[winner] + " matches");
+        scores.innerHTML = "<th>X</th><th>O</th>";
+        scoreBoard.X = 0;
+        scoreBoard.O = 0;
+        scoreBoard.rounds = 0;
+    }
+}

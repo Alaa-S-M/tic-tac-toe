@@ -11,29 +11,36 @@
 </head>
 
 <body>
-    <h1>Tic Tac Toe</h1>
-    <select id="number of players">
-        <option value="">Number Of Players</option>
-        <option value="1">One player</option>
-        <option value="2">Two players</option>
-    </select>
-    <div id="turns">Current Player:
-        <lable id="X" style="display: inline;">X</lable>
-        <lable id="O" style="display: none;">O</lable>
-    </div>
-    <div id="board">
-        <div class="content"></div>
-        <div class="content"></div>
-        <div class="content"></div>
-        <div class="content"></div>
-        <div class="content"></div>
-        <div class="content"></div>
-        <div class="content"></div>
-        <div class="content"></div>
-        <div class="content"></div>
-    </div>
-    <button id="play again">Play again</button>
-    <script src="src/index.js"> </script>
+    <section class="container">
+        <div class="main">
+            <h1>Tic Tac Toe</h1>
+            <select id="number of players">
+                <option value="">Number Of Players</option>
+                <option value="1">One player</option>
+                <option value="2">Two players</option>
+            </select>
+            <div id="turns">Current Player:
+                <lable id="X" style="display: inline;">X</lable>
+                <lable id="O" style="display: none;">O</lable>
+            </div>
+            <div id="board">
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+                <div class="content"></div>
+            </div>
+            <button id="play again">Play again</button>
+        </div>
+        <div class="score">
+            <iframe id ="scoreBoard" src="scoreBoard.html"></iframe>
+            <script src="src/index.js"> </script>
+        </div>
+    </section>
 </body>
 
 </html>

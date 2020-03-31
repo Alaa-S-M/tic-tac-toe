@@ -7,6 +7,7 @@
   }
  select{
     font-family: 'Indie Flower', cursive;
+    padding-right: 5%;
   }
   #board {
     position: relative;
@@ -16,11 +17,18 @@
     width: fit-content;
     display: grid;
     grid-template: repeat(3,100px) / repeat(3,100px);
+    align-self: center;
   }
-  #board , #turns {
-    display: flexbox;
+  iframe {
+    position: relative; 
+    text-align: center; 
+    margin-top: 20%;
+    margin-left: 1%;
+    float: left;
+    width: 150px;
+    background-color:  #ddd;
   }
- .content {
+   .content {
   border: 2px solid #ddd;
   border-collapse: collapse; 
   padding-top: 35%;
@@ -53,3 +61,21 @@ button:hover {
   padding-top: 1%;
 }
 
+.container {
+  width: 80%;
+  height: 500px;
+  /* background: aqua; */
+  margin: auto;
+  padding: 10px;
+}
+.main {
+  width: 60%;
+  height: 500px;
+  /* background: red; */
+  float: left;
+}
+.score {
+  margin-left: 20%;
+  height: 500px;
+  /* background: rgb(116, 68, 68); */
+}
