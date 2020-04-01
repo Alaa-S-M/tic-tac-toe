@@ -1,2 +1,2 @@
 # tic-tac-toe
-A browser tic-tac-toe game.
+A web tic-tac-toe game.
