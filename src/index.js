@@ -44,6 +44,13 @@ let resetGame = () => {
     document.getElementById("number of players").style.display = 'inline';
     document.getElementById("number of players").value = '';
     document.getElementById('board').addEventListener('click', boardListener);
+    if (scoreBoard.rounds == 5) {
+        let scores = document.getElementById('scoreBoard').contentWindow.document.getElementsByTagName('table')[0];
+        scores.innerHTML = "<th>X</th><th>O</th>";
+        scoreBoard.X = 0;
+        scoreBoard.O = 0;
+        scoreBoard.rounds = 0;
+    }
 }
 let stopGame = () => {
     [...document.getElementsByClassName('content')].forEach(element => {
@@ -94,18 +101,14 @@ let boardIsFull = () => ![...document.getElementsByClassName('content')].map(e =
 document.getElementById("play again").addEventListener('click', resetGame);
 
 let scoreBoard = { X: 0, O: 0, rounds: 0 };
-let updateScoreBoard = (winner) => {
+function updateScoreBoard(winner) {
     let scores = document.getElementById('scoreBoard').contentWindow.document.getElementsByTagName('table')[0];
     let newRow = (winner == 'X') ? "<tr> <td>1</td><td>0</td> </tr>" : "<tr> <td>0</td><td>1</td> </tr>";
     scores.innerHTML += newRow;
     scoreBoard.rounds++;
     scoreBoard[winner]++;
     if (scoreBoard.rounds == 5) {
-        winner = (scoreBoard[winner] >= 3) ? winner : (winner == 'X') ? 'O' : 'X';
+        let winner = (scoreBoard['X'] >= 3) ? 'X' : 'O';
         setTimeout(alert, 1000, "Game over! " + winner + " has won " + scoreBoard[winner] + " matches");
-        scores.innerHTML = "<th>X</th><th>O</th>";
-        scoreBoard.X = 0;
-        scoreBoard.O = 0;
-        scoreBoard.rounds = 0;
     }
 }

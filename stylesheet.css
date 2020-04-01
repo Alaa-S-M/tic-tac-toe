@@ -27,6 +27,8 @@
     float: left;
     width: 150px;
     background-color:  #ddd;
+    border: none;
+    height: 200px;
   }
    .content {
   border: 2px solid #ddd;
