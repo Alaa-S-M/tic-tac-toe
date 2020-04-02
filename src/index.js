@@ -1,6 +1,6 @@
 // choose the number of players to start the game.
 let boardListener =
-    () => setTimeout(alert, 10, 'please choose the number of players to start the game.');
+    () => setTimeout(alert, 1000, 'please choose the number of players to start the game.');
 document.getElementById('board').addEventListener('click', boardListener);
 
 // choosing the number of players
@@ -91,11 +91,11 @@ function cellListener() {
         }
         //check if this move cauesed a win or Draw
         if (checkWin(currentPlayer.innerHTML)) {
-            setTimeout(alert, 10, 'Congratulations! ' + currentPlayer.innerHTML + ' Wins!');
+            setTimeout(alert, 1000, 'Congratulations! ' + currentPlayer.innerHTML + ' Wins!');
             stopGame();
             updateScoreBoard(currentPlayer.innerHTML);
         } else if (boardIsFull()) {
-            setTimeout(alert, 10, 'XO DRAW !');
+            setTimeout(alert, 1000, 'XO DRAW !');
             stopGame();
         }
         if (AIplayer.on) {
@@ -134,7 +134,7 @@ function updateScoreBoard(winner) {
         scoreBoard[winner]++;
         if (scoreBoard.rounds == 5) {
             let winner = (scoreBoard['X'] >= 3) ? 'X' : 'O';
-            setTimeout(alert, 1000, 'Game over! ' + winner + ' has won ' + scoreBoard[winner] + ' matches');
+            setTimeout(alert, 100000, 'Game over! ' + winner + ' has won ' + scoreBoard[winner] + ' matches');
         }
     }
 }
@@ -165,11 +165,11 @@ let AIplayer = {
             }
         }
         if (checkWin(this.symbol)) {
-            setTimeout(alert, 10, 'Congratulations! ' + this.symbol + ' Wins!');
+            setTimeout(alert, 1000, 'Congratulations! ' + this.symbol + ' Wins!');
             updateScoreBoard(this.symbol);
             stopGame();
         } else if (boardIsFull()) {
-            setTimeout(alert, 10, 'XO DRAW !');
+            setTimeout(alert, 1000, 'XO DRAW !');
             stopGame();
         }
     },
